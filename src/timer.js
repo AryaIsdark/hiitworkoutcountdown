@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import useSound from "use-sound";
 import countdownSound from "./countdown.wav";
 
 const Timer = ({ initialRepDuration = 0, initialRestDuration = 0 }) => {
-  const [play, { stop }] = useSound(countdownSound);
+  const [play] = useSound(countdownSound);
 
   const [isResting, setIsResting] = useState(false);
   const [isRepping, setIsRepping] = useState(true);
@@ -58,7 +58,7 @@ const Timer = ({ initialRepDuration = 0, initialRestDuration = 0 }) => {
             strokeWidth={20}
             isPlaying={isResting}
             duration={restDuration}
-            colors={"#90ff83 "}
+            colors={"#90ff83"}
             onComplete={handleOnRestComplete}
             onUpdate={handleOnUpdate}
           >
