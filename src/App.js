@@ -57,7 +57,7 @@ function App() {
             />
             <br />
             <Button variant="danger" onClick={handleStopSession}>
-              Stop
+              End training
             </Button>
           </>
         )}
